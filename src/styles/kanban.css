@@ -1,0 +1,115 @@
+.kanban-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.kanban-toolbar-cards {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.kanban-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.kanban-input-name {
+  width: 160px;
+}
+
+.kanban-input-text {
+  width: 180px;
+}
+
+.kanban-select-col {
+  width: 140px;
+  height: 36px;
+}
+
+.kanban-btn-toolbar {
+  height: 36px;
+}
+
+.kanban-column-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.kanban-footer-hint {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.kanban-column {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-width: 240px;
+  flex: 1;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.kanban-column-title {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.kanban-column-count {
+  color: var(--text-muted);
+  margin-left: 8px;
+  font-size: 0.8rem;
+}
+
+.kanban-btn-delete-col {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.kanban-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.kanban-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: grab;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kanban-btn-delete-card {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0;
+}

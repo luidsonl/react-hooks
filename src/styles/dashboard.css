@@ -1,0 +1,127 @@
+/* Gauges row */
+.dashboard-gauges {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Stats row */
+.dashboard-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.dashboard-stat {
+  flex: 1;
+  min-width: 200px;
+}
+
+.dashboard-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dashboard-stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.dashboard-stat-value--tz {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Controls bar */
+.dashboard-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dashboard-pending {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Chart island */
+.dashboard-chart-island {
+  min-height: 100px;
+}
+
+.dashboard-chart-title {
+  margin: 0 0 8px;
+}
+
+/* Gauge component */
+.dashboard-gauge {
+  text-align: center;
+  min-width: 140px;
+}
+
+.dashboard-gauge-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.dashboard-gauge-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dashboard-gauge-track {
+  margin-top: 8px;
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dashboard-gauge-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s;
+}
+
+/* CPU Chart */
+.dashboard-chart {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 80px;
+  transition: opacity 0.2s;
+}
+
+.dashboard-chart--pending {
+  opacity: 0.5;
+}
+
+.dashboard-chart-bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-chart-bar {
+  background: #6366f1;
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+  transition: height 0.3s;
+  min-height: 2px;
+}
+
+.dashboard-chart-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dashboard-chart-empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 24px;
+}

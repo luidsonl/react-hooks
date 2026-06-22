@@ -10,7 +10,7 @@ type Props = {
 export default function Editor({ note, onSave }: Props) {
   const [title, setTitle] = useState(note.title)
   const [content, setContent] = useState(note.content)
-  const saveTimer = useRef<ReturnType<typeof setTimeout>>()
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const deferredContent = useDeferredValue(content)
 
   useEffect(() => {

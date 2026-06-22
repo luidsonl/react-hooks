@@ -14,7 +14,7 @@ export default function Dashboard() {
   const [paused, setPaused] = useState(false)
   const [isPending, startTransition] = useTransition()
   const historyRef = useRef<HistoryPoint[]>([])
-  const intervalRef = useRef<ReturnType<typeof setInterval>>()
+  const intervalRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined)
 
   const addPoint = useCallback(() => {
     const now = new Date().toLocaleTimeString(tz, { hour: '2-digit', minute: '2-digit', second: '2-digit' })

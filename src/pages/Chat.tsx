@@ -1,6 +1,6 @@
 import '../styles/chat.css'
 import { useState, useEffect, useRef, useOptimistic, useCallback, useTransition, useSyncExternalStore } from 'react'
-import { initialMessages, simulateResponse, nextId, type Message } from '../components/chat/chatTypes'
+import { initialMessages, simulateResponse, generateId, type Message } from '../components/chat/chatTypes'
 import MessageBubble from '../components/chat/MessageBubble'
 
 function getOnlineStatus() { return navigator.onLine }
@@ -31,7 +31,7 @@ export default function Chat() {
     const text = input.trim()
     setInput('')
 
-    const tempId = String(++nextId)
+    const tempId = generateId()
     const temp: Message = { id: tempId, text, user: 'You', pending: true }
 
     addOptimistic(temp)
@@ -41,7 +41,7 @@ export default function Chat() {
     startTransition(() => {
       setMessages((prev) => [
         ...prev,
-        { id: String(++nextId), text, user: 'You' },
+        { id: generateId(), text, user: 'You' },
         reply,
       ])
     })
@@ -60,7 +60,7 @@ export default function Chat() {
         'Don\'t forget to commit!', '☕ coffee time?',
       ]
       const text = msgs[Math.floor(Math.random() * msgs.length)]
-      setMessages((prev) => [...prev, { id: String(++nextId), text, user: 'Bot' }])
+      setMessages((prev) => [...prev, { id: generateId(), text, user: 'Bot' }])
     }, 8000)
     return () => clearInterval(interval)
   }, [])

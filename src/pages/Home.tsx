@@ -1,15 +1,15 @@
 const projects = [
-  { name: 'Kanban Board', href: '/kanban.html', hooks: 'useState, useReducer, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle' },
-  { name: 'Real-time Chat', href: '/chat.html', hooks: 'useState, useEffect, useRef, useOptimistic, useCallback, useTransition, useSyncExternalStore' },
-  { name: 'Form Wizard', href: '/form-wizard.html', hooks: 'useState, useEffect, useRef, useActionState, useTransition, useId, useCallback' },
-  { name: 'E-commerce', href: '/ecommerce.html', hooks: 'useState, useContext, useReducer, useMemo, useCallback, useTransition, useDeferredValue' },
-  { name: 'Dashboard', href: '/dashboard.html', hooks: 'useState, useEffect, useRef, useMemo, useCallback, useTransition, useDebugValue, useSyncExternalStore' },
-  { name: 'Markdown Notes', href: '/notes.html', hooks: 'useState, useEffect, useRef, useInsertionEffect, useCallback, useMemo, useImperativeHandle, useDeferredValue' },
-  { name: 'Event Calendar', href: '/calendar.html', hooks: 'useState, useReducer, useRef, useLayoutEffect, useMemo, useCallback, useDebugValue' },
-  { name: 'Poll / Voting', href: '/poll.html', hooks: 'useState, useEffect, useContext, useReducer, useCallback, useMemo, useOptimistic, use, useTransition' },
+  { id: 'kanban', name: 'Kanban Board', hooks: 'useState, useReducer, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle' },
+  { id: 'chat', name: 'Real-time Chat', hooks: 'useState, useEffect, useRef, useOptimistic, useCallback, useTransition, useSyncExternalStore' },
+  { id: 'form-wizard', name: 'Form Wizard', hooks: 'useState, useEffect, useRef, useActionState, useTransition, useId, useCallback' },
+  { id: 'ecommerce', name: 'E-commerce', hooks: 'useState, useContext, useReducer, useMemo, useCallback, useTransition, useDeferredValue' },
+  { id: 'dashboard', name: 'Dashboard', hooks: 'useState, useEffect, useRef, useMemo, useCallback, useTransition, useDebugValue, useSyncExternalStore' },
+  { id: 'notes', name: 'Markdown Notes', hooks: 'useState, useEffect, useRef, useInsertionEffect, useCallback, useMemo, useImperativeHandle, useDeferredValue' },
+  { id: 'calendar', name: 'Event Calendar', hooks: 'useState, useReducer, useRef, useLayoutEffect, useMemo, useCallback, useDebugValue' },
+  { id: 'poll', name: 'Poll / Voting', hooks: 'useState, useEffect, useContext, useReducer, useCallback, useMemo, useOptimistic, use, useTransition' },
 ]
 
-export default function Home() {
+export default function Home({ onNavigate }: { onNavigate: (page: string) => void }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16, padding: 24 }}>
       {projects.map((p) => (
@@ -20,7 +20,7 @@ export default function Home() {
         }}>
           <div style={{ fontSize: '1.125rem', fontWeight: 600, color: '#e4e5ea' }}>{p.name}</div>
           <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--mono)' }}>{p.hooks}</div>
-          <a href={p.href} style={{ color: 'var(--accent)', marginTop: 'auto' }}>Open project →</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); onNavigate(p.id) }} style={{ color: 'var(--accent)', marginTop: 'auto' }}>Open project →</a>
         </div>
       ))}
     </div>

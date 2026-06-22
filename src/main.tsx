@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Notes from '../pages/Notes'
+import App from './App'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode><Notes /></StrictMode>
+  <StrictMode><App /></StrictMode>
 )

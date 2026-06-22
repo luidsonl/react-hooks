@@ -1,12 +1,12 @@
 const projects = [
-  { id: 'kanban', name: 'Kanban Board', hooks: 'useState, useReducer, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle' },
+  { id: 'kanban', name: 'Kanban Board', hooks: 'useState, useRef, useCallback, useMemo' },
   { id: 'chat', name: 'Real-time Chat', hooks: 'useState, useEffect, useRef, useOptimistic, useCallback, useTransition, useSyncExternalStore' },
-  { id: 'form-wizard', name: 'Form Wizard', hooks: 'useState, useEffect, useRef, useActionState, useTransition, useId, useCallback' },
+  { id: 'form-wizard', name: 'Form Wizard', hooks: 'useState, useActionState, useTransition, useId' },
   { id: 'ecommerce', name: 'E-commerce', hooks: 'useState, useContext, useReducer, useMemo, useCallback, useTransition, useDeferredValue' },
   { id: 'dashboard', name: 'Dashboard', hooks: 'useState, useEffect, useRef, useMemo, useCallback, useTransition, useDebugValue, useSyncExternalStore' },
-  { id: 'notes', name: 'Markdown Notes', hooks: 'useState, useEffect, useRef, useInsertionEffect, useCallback, useMemo, useImperativeHandle, useDeferredValue' },
-  { id: 'calendar', name: 'Event Calendar', hooks: 'useState, useReducer, useRef, useLayoutEffect, useMemo, useCallback, useDebugValue' },
-  { id: 'poll', name: 'Poll / Voting', hooks: 'useState, useEffect, useContext, useReducer, useCallback, useMemo, useOptimistic, use, useTransition' },
+  { id: 'notes', name: 'Markdown Notes', hooks: 'useState, useEffect, useRef, useInsertionEffect, useCallback, useMemo, useDeferredValue' },
+  { id: 'calendar', name: 'Event Calendar', hooks: 'useState, useReducer, useRef, useLayoutEffect, useEffect, useMemo, useCallback, useDebugValue' },
+  { id: 'poll', name: 'Poll / Voting', hooks: 'useState, useEffect, useContext, useReducer, useCallback, useMemo, useOptimistic, useTransition' },
 ]
 
 export default function Home({ onNavigate }: { onNavigate: (page: string) => void }) {

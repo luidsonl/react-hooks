@@ -1,0 +1,109 @@
+.formwizard-steps {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.formwizard-step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.formwizard-step-dot--active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.formwizard-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.formwizard-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+}
+
+.formwizard-input--error {
+  border-color: var(--danger);
+}
+
+.formwizard-error-text {
+  color: var(--danger);
+  font-size: 0.75rem;
+}
+
+.formwizard-actions-right {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.formwizard-nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formwizard-submitted-text {
+  text-align: center;
+  padding: 48px;
+}
+
+.formwizard-success-heading {
+  color: var(--success);
+}
+
+.formwizard-submitted-json {
+  margin-top: 16px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.formwizard-review-section {
+  margin-top: 16px;
+  font-size: 0.875rem;
+}
+
+.formwizard-review-row {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.formwizard-review-key {
+  color: var(--text-muted);
+  min-width: 120px;
+}
+
+.formwizard-review-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formwizard-submit-btn {
+  padding: 8px 24px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.formwizard-submit-btn:disabled {
+  background: var(--text-muted);
+}

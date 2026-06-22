@@ -1,0 +1,77 @@
+.notes-page {
+  max-width: 900px;
+}
+
+.notes-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.notes-tab-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.notes-tab {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.notes-tab--active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.notes-tab-delete {
+  margin-left: 6px;
+  color: var(--danger);
+}
+
+.notes-tab--active .notes-tab-delete {
+  color: #fff;
+}
+
+.notes-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.notes-editor-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notes-title-input {
+  font-weight: 600;
+}
+
+.notes-textarea {
+  height: 400px;
+  resize: vertical;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.notes-preview {
+  height: 457px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  transition: opacity 0.15s;
+}
+
+.notes-preview[data-stale] {
+  opacity: 0.6;
+}

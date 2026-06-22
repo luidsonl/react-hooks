@@ -1,0 +1,141 @@
+.calendar-page {
+  max-width: 800px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.calendar-select-month {
+  width: 140px;
+  text-align: center;
+}
+
+.calendar-select-year {
+  width: 90px;
+  text-align: center;
+}
+
+.calendar-bottom {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.calendar-hint {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+  font-weight: 600;
+}
+
+.calendar-day {
+  border-radius: var(--radius);
+  padding: 6px 4px;
+  min-height: 50px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.calendar-day:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calendar-day--today {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.calendar-day--selected {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.calendar-day-number {
+  font-size: 0.8rem;
+}
+
+.calendar-day-dots {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2px;
+}
+
+.calendar-day-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.calendar-panel-title {
+  margin: 0 0 8px;
+}
+
+.calendar-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.calendar-no-events {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.calendar-event-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.calendar-event-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.calendar-edit-input {
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.calendar-event-title {
+  flex: 1;
+  cursor: pointer;
+}
+
+.calendar-delete-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  padding: 0;
+}

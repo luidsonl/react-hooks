@@ -1,0 +1,138 @@
+.ecommerce-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+}
+
+.ecommerce-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ecommerce-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ecommerce-filters-title {
+  margin: 0;
+}
+
+.ecommerce-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.ecommerce-price-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ecommerce-result-count {
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.ecommerce-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.ecommerce-product-grid-loading {
+  opacity: 0.6;
+}
+
+.ecommerce-empty {
+  color: var(--text-muted);
+  padding: 24px;
+}
+
+.ecommerce-product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ecommerce-product-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ecommerce-product-category {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.ecommerce-product-rating {
+  font-size: 0.8rem;
+}
+
+.ecommerce-product-price {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ecommerce-product-add {
+  margin-top: auto;
+}
+
+.ecommerce-cart {
+  font-size: 0.85rem;
+}
+
+.ecommerce-cart-title {
+  margin: 0 0 8px;
+}
+
+.ecommerce-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+  gap: 4px;
+}
+
+.ecommerce-cart-item-name {
+  flex: 1;
+}
+
+.ecommerce-cart-qty-btn {
+  padding: 0 6px;
+  font-size: 0.75rem;
+}
+
+.ecommerce-cart-qty-value {
+  min-width: 16px;
+  text-align: center;
+}
+
+.ecommerce-cart-item-total {
+  min-width: 50px;
+  text-align: right;
+}
+
+.ecommerce-cart-remove {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.ecommerce-cart-total {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 4px;
+  font-weight: 600;
+}
